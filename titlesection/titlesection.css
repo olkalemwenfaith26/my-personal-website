@@ -1,5 +1,5 @@
 h1 { 
-    color: white;
+    color: red;
 }
  /*this is a css comment*/     
 button:hover {
@@ -13,4 +13,6 @@ cursor: pointer;
    
     Text-align: center;
    padding-top: 200px;
+   background-image: url('../images/image.png');
+   background-position: center top;
 }
