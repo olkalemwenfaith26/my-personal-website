@@ -1,0 +1,16 @@
+h1 { 
+    color: white;
+}
+      
+button:hover {
+color: blue;
+font-size: 20px;
+cursor: pointer;
+
+}
+
+#title {
+    width: 100%;
+    Text-align: center;
+    margin-top: 50px;
+}
