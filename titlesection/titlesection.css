@@ -1,5 +1,7 @@
 :root {
-    --titleSectionPrimaryColors: purple;
+    --titleSectionPrimaryColors: rgb(255, 255, 255);
+    --titleSectionSecondaryColors: rgb(0, 0, 0);
+
 }
 
 
@@ -21,7 +23,8 @@
 
      
 .title-section-button:hover {
-    background-color: red;
+    background-color: var(--titleSectionPrimaryColors);
+    color: var(--titleSectionSecondaryColors);
     cursor: pointer;
 
 }
