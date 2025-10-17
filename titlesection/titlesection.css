@@ -1,18 +1,28 @@
-h1 { 
-    color: red;
+:root {
+    --titleSectionPrimaryColors: purple;
 }
- /*this is a css comment*/     
-button:hover {
-color: blue;
-font-size: 20px;
-cursor: pointer;
 
-}
 
 #title {
-   
+    color: var(--titleSectionPrimaryColors);
     Text-align: center;
-   padding-top: 200px;
-   background-image: url('../images/image.png');
-   background-position: center top;
+    padding-top: 200px;
+    background-image: url('../images/image.png');
+    background-position: center top;
 }
+
+.title-section-button {
+    color: var(--titleSectionPrimaryColors);
+    padding: 15px 20px;
+    background-color: transparent;
+    border: solid var(--titleSectionPrimaryColors) 1px;
+    border-radius: 5px;
+}
+
+     
+.title-section-button:hover {
+    background-color: red;
+    cursor: pointer;
+
+}
+
