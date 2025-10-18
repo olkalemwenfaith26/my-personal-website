@@ -39,3 +39,13 @@
 
 }
 
+.misc-section{
+    width: 100vw;
+    padding: 50px;
+}
+.text-block-container{
+    width: 65%;
+    
+    margin: 0 auto;
+}
+
