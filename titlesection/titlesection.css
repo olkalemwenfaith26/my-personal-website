@@ -11,6 +11,16 @@
     padding-top: 200px;
     background-image: url('../images/image.png');
     background-position: center top;
+
+}
+
+.title-section-header{
+    margin-bottom: -15px;
+
+}
+
+.title-section-subtitle{
+    margin-bottom: 50px;
 }
 
 .title-section-button {
