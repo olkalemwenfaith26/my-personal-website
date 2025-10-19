@@ -16,6 +16,15 @@
     margin: 10px;
     color: var(--titleSectionSecondaryColors);
 }
+.aboutme-icons > a {
+    text-decoration: none;
+}
+.aboutme-download-link > a {
+    color: black;
+}
+.aboutme-download-link {
+    margin-top: 40px;
+}
 
 .aboutme-icon:hover {
     cursor: pointer;
