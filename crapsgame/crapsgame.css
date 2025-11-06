@@ -15,7 +15,7 @@
     background-image: url(../images/casinoimage.png);
     background-size: cover ;
 }
-.craps-registration-pane {
+#craps-registration-pane {
     margin-top: 25px;
     text-align: center;
 
@@ -37,5 +37,8 @@
 .craps-registration-continue:hover {
     cursor: pointer;
     font-weight: bold;
-    
+}
+
+#craps-main-section {
+    display: none;
 }
