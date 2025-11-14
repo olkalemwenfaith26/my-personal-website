@@ -8,6 +8,7 @@
   background-image: url('../images/blueimage.png');
   color: white;
   background-position: center top;
+  padding: 1px;
 }
 .craps-game-title {
     font-size: var(--game-title-size);
