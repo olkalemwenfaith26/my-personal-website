@@ -19,6 +19,9 @@ const crapsStatsUsername= "craps-stats-username"
 const crapsStatsMoney = "craps-stats-money"
 const crapsStatsRounds = "craps-stats-rounds"
 const crapsUserBetAmount = "craps-user-bet-amount"
+const crapsRollDiceButton = "craps-roll-dice-button"
+const crapsRollDiceAnimationContainer= "craps-roll-dice-animation-container"
+
 //In-game Variables
 let currentMoney = startingMoney
 let currentRounds = startingRounds
@@ -97,3 +100,12 @@ function setBetAmount (betAmount) {
     document.getElementById(crapsUserBetAmount).innerHTML = "$" + betAmount
 }
 
+function rollDice () {
+    document.getElementById(crapsRollDiceButton).style.display = "none"
+    const diceRollElement= document.getElementById(crapsRollDiceAnimationContainer)
+    rollADie({ element: diceRollElement, numberOfDice: 2, callback: processedDiceResult, delay: 10000000 });
+}
+
+function processedDiceResult (diceResult) {
+    console.log(diceResult)
+}
