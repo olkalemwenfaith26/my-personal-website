@@ -113,7 +113,7 @@ function rollDice () {
     formatDiceScale ()
     document.getElementById(crapsRollDiceButton).style.display = "none"
     const diceRollElement= document.getElementById(crapsRollDiceAnimationContainer)
-    rollADie({ element: diceRollElement, numberOfDice: 2, callback: processedDiceResult, delay: 10000000 });
+    rollADie({ element: diceRollElement, numberOfDice: 2, callback: delayedProcessedDiceRsult, delay: 10000000 });
 }
 
 window.addEventListener("resize", formatDiceScale);
@@ -127,8 +127,12 @@ function formatDiceScale () {
    document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale("+ scale +")"
 }
 
+function delayedProcessedDiceRsult (diceResult) {
+    setTimeout(function() { processedDiceResult(diceResult); }, 1000)
+}
+
 function processedDiceResult (diceResult) {
-    const sum = diceResult.reduce((partialSum, a) => partialSum + a, 0);
+    const sum = diceResult.reduce((partialSum, a) => partialSum + a, 0)
     let diceSumResult = bets.even
     if (sum % 2 === 1) {
       diceSumResult = bets.odd
