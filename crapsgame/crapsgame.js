@@ -24,7 +24,7 @@ const crapsRollDiceAnimationContainer= "craps-roll-dice-animation-container"
 const crapsBettingGridContainer = "craps-betting-grid-container"
 const crapsRoundFinishGridContainer = "craps-round-finish-grid-container"
 const crapsRoundFinishMessage ="craps-round-finish-message"
-
+const nextRound = "next-round"
 //In-game Variables
 let currentMoney = startingMoney
 let currentRounds = startingRounds
@@ -111,11 +111,15 @@ function chooseBet (bet) {
 }
 
 function increaseBet () {
-    setBetAmount(currentBetAmount + minimumBet, currentMoney)
+    if (currentBetAmount != currentMoney) {
+        setBetAmount(currentBetAmount + minimumBet)
+    }
 }
+    
 
 function decreaseBet () {
-   setBetAmount(currentBetAmount - minimumBet, minimumBet)
+   setBetAmount(Math.max(currentBetAmount - minimumBet, minimumBet))
+   
 } 
 
 
@@ -169,10 +173,14 @@ function processedDiceResult (diceResult) {
     }
     if (currentMoney === 0) {
         roundFinishMessage = "YOU ARE OUT!"
+        document.getElementById(nextRound).style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+        document.getElementById(nextRound).style.cursor = "not-allowed"
+        document.getElementById(nextRound).onclick = "null"
+        document.getElementById(nextRound).style.color = "grey"
     }
     document.getElementById(crapsBettingGridContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "block"
-     document.getElementById(crapsRoundFinishMessage).innerHTML = roundFinishMessage
+    document.getElementById(crapsRoundFinishMessage).innerHTML = roundFinishMessage
 }
 
 function exitGame () {
